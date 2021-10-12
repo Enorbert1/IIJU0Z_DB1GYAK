@@ -1,0 +1,7 @@
+ - Könyv 1-n kapcsolatban van Hallgatóval
+ - Hallgató 1-n kapcsolatban van Könyvvel
+ - Könyv 1-1 kapcsolatban van Könyvtárral
+ - Könyv 1-n kapcsolatban van Szerzővel
+ - Szerző 1-n kapcsolatban van Könyvvel
+ - Campusnak 1-n kapcsolata van Könyvtárral
+ - Szerző e-mail tulajdonsága több értéket vehet fel egyszerre
