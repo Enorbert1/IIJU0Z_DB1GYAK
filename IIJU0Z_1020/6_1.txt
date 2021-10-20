@@ -1,0 +1,15 @@
+CREATE TABLE gyarto(
+	adoszam int NOT NULL,
+	nev char(30),
+	telephely char,
+	PRIMARY KEY (adoszam)
+	);
+
+CREATE TABLE termek(
+    tkod int NOT NULL PRIMARY KEY,
+    nev char(50),
+    ear int NOT NULL
+    	CHECK (ear > 0),
+    gyarto int NOT NULL,
+    FOREIGN KEY (gyarto) REFERENCES gyarto(adoszam)
+    );
