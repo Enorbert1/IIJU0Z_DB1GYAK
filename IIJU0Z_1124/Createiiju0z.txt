@@ -1,0 +1,24 @@
+CREATE TABLE oktató(
+    neptunkód int PRIMARY KEY NOT NULL,
+    név char,
+    tanszék char);
+	
+CREATE TABLE tárgy(
+    kód int PRIMARY KEY NOT NULL,
+    kredit int NOT NULL,
+    megnevezés char,
+    félév int,
+    vizsgajegy int);
+	
+CREATE TABLE hallgató(
+    neptunkód int PRIMARY KEY NOT NULL,
+    név char,
+    tankör char,
+    szül_d date,
+    életkor int AS (CURRENT_DATE() - szül_d),
+    irszám char,
+    város char,
+    utca char,
+    hsz char,
+    cím char AS (concat_ws(' ', irszám, város, utca, hsz))
+);
